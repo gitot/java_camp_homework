@@ -1,0 +1,120 @@
+Classfile /Users/wangguiyong/luca/java_interview/subjects/advanced_java/java_camp_homework/jvm01/src/ArithmeticByteCodeAnalysis.class
+  Last modified Jan 8, 2023; size 605 bytes
+  MD5 checksum faf8a96015564c5987243650de7c588a
+  Compiled from "ArithmeticByteCodeAnalysis.java"
+public class ArithmeticByteCodeAnalysis
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #7.#17         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #18.#19        // java/lang/System.out:Ljava/io/PrintStream;
+   #3 = Methodref          #20.#21        // java/io/PrintStream.println:(I)V
+   #4 = String             #22            // nothing.
+   #5 = Methodref          #20.#23        // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #6 = Class              #24            // ArithmeticByteCodeAnalysis
+   #7 = Class              #25            // java/lang/Object
+   #8 = Utf8               <init>
+   #9 = Utf8               ()V
+  #10 = Utf8               Code
+  #11 = Utf8               LineNumberTable
+  #12 = Utf8               main
+  #13 = Utf8               ([Ljava/lang/String;)V
+  #14 = Utf8               StackMapTable
+  #15 = Utf8               SourceFile
+  #16 = Utf8               ArithmeticByteCodeAnalysis.java
+  #17 = NameAndType        #8:#9          // "<init>":()V
+  #18 = Class              #26            // java/lang/System
+  #19 = NameAndType        #27:#28        // out:Ljava/io/PrintStream;
+  #20 = Class              #29            // java/io/PrintStream
+  #21 = NameAndType        #30:#31        // println:(I)V
+  #22 = Utf8               nothing.
+  #23 = NameAndType        #30:#32        // println:(Ljava/lang/String;)V
+  #24 = Utf8               ArithmeticByteCodeAnalysis
+  #25 = Utf8               java/lang/Object
+  #26 = Utf8               java/lang/System
+  #27 = Utf8               out
+  #28 = Utf8               Ljava/io/PrintStream;
+  #29 = Utf8               java/io/PrintStream
+  #30 = Utf8               println
+  #31 = Utf8               (I)V
+  #32 = Utf8               (Ljava/lang/String;)V
+{
+  public ArithmeticByteCodeAnalysis();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 1: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=8, args_size=1
+         0: iconst_0
+         1: istore_1
+         2: iload_1
+         3: bipush        10
+         5: if_icmpge     65
+         8: iload_1
+         9: iconst_5
+        10: if_icmpge     51
+        13: iconst_1
+        14: istore_2
+        15: iconst_2
+        16: istore_3
+        17: iload_2
+        18: iload_3
+        19: iadd
+        20: iconst_5
+        21: imul
+        22: istore        4
+        24: iconst_2
+        25: istore        5
+        27: iload         4
+        29: iload         5
+        31: idiv
+        32: iconst_3
+        33: irem
+        34: istore        6
+        36: iload         6
+        38: istore        7
+        40: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        43: iload         7
+        45: invokevirtual #3                  // Method java/io/PrintStream.println:(I)V
+        48: goto          59
+        51: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        54: ldc           #4                  // String nothing.
+        56: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        59: iinc          1, 1
+        62: goto          2
+        65: return
+      LineNumberTable:
+        line 3: 0
+        line 4: 8
+        line 5: 13
+        line 6: 15
+        line 7: 17
+        line 8: 24
+        line 9: 27
+        line 10: 36
+        line 11: 40
+        line 12: 48
+        line 13: 51
+        line 3: 59
+        line 17: 65
+      StackMapTable: number_of_entries = 4
+        frame_type = 252 /* append */
+          offset_delta = 2
+          locals = [ int ]
+        frame_type = 48 /* same */
+        frame_type = 7 /* same */
+        frame_type = 250 /* chop */
+          offset_delta = 5
+}
+SourceFile: "ArithmeticByteCodeAnalysis.java"
