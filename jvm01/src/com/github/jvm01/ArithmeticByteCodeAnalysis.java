@@ -1,3 +1,5 @@
+package com.github.jvm01;
+
 public class ArithmeticByteCodeAnalysis {
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
